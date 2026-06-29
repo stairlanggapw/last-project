@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:auto;
+}
+
+section{
+    opacity:0;
+    transform:translateY(70px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.footer{
+    margin-top: 20px;
+}
+
+.footerWave{
+    display:block;
+    width:100%;
+}
+
+.footerContent{
+    background:#2E7D32;
+    display:flex;
+    justify-content:space-between;
+    gap:80px;
+    padding:0 80px 70px;
+    color:white;
+}
+
+.footerBrand{
+    width:35%;
+}
+
+.footerBrand img{
+    width:220px;
+    margin-bottom:25px;
+}
+
+.footerBrand p{
+    line-height:1.8;
+    color:#eef7ee;
+    margin-bottom:30px;
+}
+
+.socialMedia{
+    display:flex;
+    gap:18px;
+}
+
+.socialMedia a{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.socialMedia a:hover{
+    background:white;
+    color:#2E7D32;
+    transform:translateY(-5px);
+}
+
+.socialMedia ion-icon{
+    font-size:22px;
+}
+
+.footerLinks{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:50px;
+}
+
+.footerColumn{
+    display:flex;
+    flex-direction:column;
+}
+
+.footerColumn h3{
+    margin-bottom:25px;
+    font-size:22px;
+}
+
+.footerColumn a{
+    color:#eef7ee;
+    text-decoration:none;
+    margin-bottom:15px;
+    transition:.3s;
+}
+
+.footerColumn a:hover{
+    color:white;
+    transform:translateX(5px);
+}
+
+.copyright{
+    background:#256628;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    color:white;
+}
+
+.copyrightLinks{
+    display:flex;
+    gap:25px;
+}
+
+.copyrightLinks a{
+    color:white;
+    text-decoration:none;
+}
+
+.copyrightLinks a:hover{
+    text-decoration:underline;
+}
+
+@media (max-width:992px){
+
+    .footerContent{
+        flex-direction:column;
+        gap:50px;
+        padding:20px 40px 60px;
+    }
+
+    .footerBrand{
+        width:100%;
+        text-align:center;
+    }
+
+    .footerBrand img{
+        width:200px;
+    }
+
+    .footerBrand p{
+        max-width:600px;
+        margin:0 auto 30px;
+    }
+
+    .socialMedia{
+        justify-content:center;
+    }
+
+    .footerLinks{
+        width:100%;
+        grid-template-columns:repeat(3,1fr);
+        gap:40px;
+    }
+
+    .copyright{
+        padding:18px 40px;
+    }
+
+    .copyrightLinks{
+        gap:18px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .footerWave{
+        width:150%;
+        max-width:none;
+        transform:translateX(-16.5%);
+    }
+
+    .footerContent{
+        padding:20px 25px 50px;
+        gap:40px;
+    }
+
+    .footerBrand{
+        text-align:center;
+    }
+
+    .footerBrand img{
+        width:180px;
+        margin:auto auto 20px;
+        display:block;
+    }
+
+    .footerBrand p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .socialMedia{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .footerLinks{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:35px;
+    }
+
+    .footerColumn h3{
+        margin-bottom:15px;
+        font-size:24px;
+    }
+
+    .footerColumn a{
+        margin-bottom:12px;
+    }
+
+    .copyright{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+        padding:20px;
+    }
+
+    .copyrightLinks{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .footerWave{
+        width:200%;
+        max-width:none;
+        transform:translateX(-25%);
+    }
+
+    .footerContent{
+        padding:15px 20px 40px;
+    }
+
+    .footerBrand img{
+        width:160px;
+    }
+
+    .footerBrand p{
+        font-size:14px;
+    }
+
+    .footerColumn h3{
+        font-size:20px;
+    }
+
+    .footerColumn a{
+        font-size:15px;
+    }
+
+    .socialMedia a{
+        width:40px;
+        height:40px;
+    }
+
+    .socialMedia ion-icon{
+        font-size:20px;
+    }
+
+    .copyright{
+        font-size:14px;
+    }
+
+    .copyrightLinks{
+        flex-direction:column;
+        gap:10px;
+    }
+
+}
+
+.paymentSection{
+    padding:40px 80px;
+    background:#fafafa;
+    min-height:100vh;
+    font-family: "Manrope", sans-serif;
+}
+
+.paymentTop{
+    margin-bottom:40px;
+}
+
+.backBtn{
+    text-decoration:none;
+    color:#2E7D32;
+    font-size:18px;
+    font-weight:700;
+}
+
+.paymentTitle{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.paymentTitle h1{
+    font-size:56px;
+    margin-bottom:15px;
+}
+
+.paymentTitle p{
+    max-width:650px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+.buttonChips{
+    width:260px;
+    margin:0 auto 70px;
+    padding:6px;
+    background:#ececec;
+    border-radius:50px;
+    display:flex;
+    position:relative;
+}
+
+.switch{
+    position:absolute;
+    top:6px;
+    left:6px;
+    width:124px;
+    height:48px;
+    background:#2E7D32;
+    border-radius:50px;
+    transition:.35s;
+}
+
+.chip{
+    flex:1;
+    height:48px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    position:relative;
+    z-index:2;
+    font-size:17px;
+    font-weight:600;
+    color:#333;
+}
+
+.chip.active{
+    color:#fff;
+}
+
+.pricingCards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.priceCard{
+    background:#fff;
+    border-radius:22px;
+    padding:35px;
+    border:1px solid #ddd;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.priceCard:hover{
+    transform:translateY(-10px);
+}
+
+.activeCard{
+    background:#141414;
+    color:#fff;
+    transform:scale(1.05);
+}
+
+.activeCard:hover{
+    transform:scale(1.05) translateY(-10px);
+}
+
+.cardHeader{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+}
+
+.cardHeader h3{
+    font-size:20px;
+}
+
+.badge{
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.free{
+    background:#d7ffe7;
+    color:#2E7D32;
+}
+
+.pro{
+    background:#ff8c42;
+    color:#fff;
+}
+
+.premium{
+    background:#ffe4c0;
+    color:#ff8c00;
+}
+
+.priceCard h2{
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.priceCard span{
+    font-size:18px;
+    color:#888;
+}
+
+.activeCard span{
+    color:#bbb;
+}
+
+.cardBtn{
+    width:100%;
+    padding:18px;
+    border-radius:12px;
+    border:2px solid #ddd;
+    background:#fff;
+    cursor:pointer;
+    font-size:17px;
+    margin-bottom:30px;
+    transition:.3s;
+}
+
+.cardBtn:hover{
+    background:#2E7D32;
+    color:#fff;
+}
+
+.activeBtn{
+    background:#2E7D32;
+    color:white;
+    border:none;
+}
+
+.priceCard ul{
+    list-style:none;
+}
+
+.priceCard li{
+    margin:18px 0;
+    color:#666;
+}
+
+.activeCard li{
+    color:#ddd;
+}
+
+.purchaseModal,
+.successModal{
+    font-family: "Manrope", sans-serif;
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(10px);
+    z-index:9999;
+}
+
+.modalCard{
+    width:100%;
+    max-width:720px;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    position:relative;
+    animation:popup .35s;
+}
+
+.closeModal{
+    position:absolute;
+    top:20px;
+    right:25px;
+    font-size:35px;
+    cursor:pointer;
+}
+
+.modalSubtitle{
+    color:#777;
+    margin-bottom:30px;
+}
+
+.inputGrid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.inputGroup{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+
+.inputGroup label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.inputGroup input,
+.inputGroup textarea,
+.inputGroup select{
+
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    outline:none;
+}
+
+.inputGroup textarea{
+    resize:none;
+}
+
+.purchaseBtn{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    background:#2E7D32;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.purchaseBtn:hover{
+    background:#256628;
+}
+
+.successCard{
+    width:100%;
+    max-width:520px;
+    background:#ffffff;
+    border-radius:25px;
+    padding:40px;
+    position:relative;
+    text-align:center;
+    animation:popup .35s;
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+    overflow:hidden;
+}
+
+.successCard::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(
+        90deg,
+        #2E7D32,
+        #43A047,
+        #66BB6A
+    );
+}
+
+.successIcon{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.successGif{
+    width:150px;
+    display:block;
+}
+
+.successCard h2{
+    font-size:34px;
+    color:#2E7D32;
+    margin-bottom:10px;
+}
+
+.successText{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.paymentInfo,
+.productInfo{
+    background:#f8f8f8;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:20px;
+    text-align:left;
+}
+
+.paymentInfo h3,
+.productInfo h3{
+    color:#2E7D32;
+    margin-bottom:15px;
+}
+
+.detailItem{
+    display:flex;
+    justify-content:space-between;
+    margin:12px 0;
+}
+
+.paid{
+    color:#2E7D32;
+    font-weight:bold;
+}
+
+#closeSuccess{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    background:#2E7D32;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+#closeSuccess:hover{
+    background:#256628;
+}
+
+@media(max-width:992px){
+
+    .pricingCards{
+        grid-template-columns:1fr;
+        max-width:500px;
+        margin:auto;
+    }
+
+    .activeCard{
+        transform:none;
+    }
+
+    .paymentTitle h1{
+        font-size:44px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .paymentSection{
+        padding:30px 20px;
+    }
+
+    .paymentTitle h1{
+        font-size:34px;
+    }
+
+    .buttonChips{
+        width:100%;
+        max-width:300px;
+    }
+
+    .switch{
+        width:calc(50% - 6px);
+    }
+
+    .modalCard,
+    .successCard{
+        padding:25px;
+    }
+
+    .inputGrid{
+        grid-template-columns:1fr;
+    }
+
+    .successGif{
+        width:120px;
+    }
+
+}
