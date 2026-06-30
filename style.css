@@ -272,11 +272,11 @@
 .reviewContent p {
     padding: 15px 20px;
     line-height: 1.8;
-    color: #111111;
-    background: rgba(255,255,255,.25);
+    color: #fff;
+    background: rgba(203, 200, 200, 0.25);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255,255,255,.3);
+    border: 1px solid rgba(243, 234, 234, 0.3);
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,.15);
 }
