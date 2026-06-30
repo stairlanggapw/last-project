@@ -22,7 +22,8 @@ section.show{
 }
 
 .footer{
-    margin-top: 20px;
+    overflow: hidden;
+    background: #2F4F3F;
 }
 
 .footerWave{
@@ -31,7 +32,7 @@ section.show{
 }
 
 .footerContent{
-    background:#2E7D32;
+    background:#172828;
     display:flex;
     justify-content:space-between;
     gap:80px;
@@ -112,12 +113,24 @@ section.show{
 }
 
 .copyright{
-    background:#256628;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 80px;
-    color:white;
+    position: relative;
+    background: #172828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    color: white;
+}
+
+.copyright::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 1px;
+    background: #fff;
 }
 
 .copyrightLinks{
@@ -289,7 +302,7 @@ section.show{
 
 .paymentSection{
     padding:40px 80px;
-    background:#fafafa;
+    background: #2F4F3F;
     min-height:100vh;
     font-family: "Manrope", sans-serif;
 }
@@ -299,10 +312,21 @@ section.show{
 }
 
 .backBtn{
-    text-decoration:none;
-    color:#2E7D32;
-    font-size:18px;
-    font-weight:700;
+    display: inline-block;
+    padding: 5px 15px;
+    background: #333;
+    border: 3px solid #333;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .3s ease;
+}
+
+.backBtn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
 }
 
 .paymentTitle{
@@ -313,12 +337,13 @@ section.show{
 .paymentTitle h1{
     font-size:56px;
     margin-bottom:15px;
+    color: #fff;
 }
 
 .paymentTitle p{
     max-width:650px;
     margin:auto;
-    color:#666;
+    color:#fff;
     line-height:1.8;
 }
 

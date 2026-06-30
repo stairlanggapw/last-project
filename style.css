@@ -28,14 +28,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 30px;
-    background: rgba(0,0,0,.88);
+    background: rgba(35, 34, 34, 0.88);
+    border: none;
     border-radius: 50px;
     z-index: 1000;
 }
 
 .navigationBar.scrolled{
     top:10px;
-    background:rgba(0,0,0,.88);
+    background:rgba(35, 34, 34, 0.88);
     backdrop-filter:blur(15px);
     box-shadow:0 15px 40px rgba(0,0,0,.18);
 }
@@ -148,7 +149,7 @@
 
 .aboutSection {
     padding: 70px 80px;
-    background: #fff;
+    background: #2F4F4F;
 }
 
 .title {
@@ -158,14 +159,14 @@
 
 .title h2 {
     font-size: 48px;
-    color: #222;
+    color: #fff;
     margin-bottom: 15px;
     font-family: "Manrope", sans-serif;
 }
 
 .title p {
     font-size: 18px;
-    color: #666;
+    color: #fff;
 }
 
 .serviceContent {
@@ -471,7 +472,7 @@
 
 .gallerySection {
     padding: 100px 55px;
-    background: #f8f9fa;
+    background: #2F4F4F;
 }
 
 .galleryContent .title {
@@ -481,12 +482,12 @@
 
 .galleryContent .title h2 {
     font-size: 48px;
-    color: #222;
+    color: #fff;
     margin-bottom: 15px;
 }
 
 .galleryContent .title p {
-    color: #666;
+    color: #fff;
     font-size: 18px;
 }
 
@@ -520,6 +521,7 @@
     margin: 20px;
     font-size: 24px;
     color: #2E7D32;
+    font-family: ;
 }
 
 .galleryCard p {
@@ -714,7 +716,7 @@
 
 .projectSection{
     padding:50px 80px;
-    background: #ffffff;
+    background: #172828;
 }
 
 .blogImg{
@@ -813,7 +815,7 @@
 
 .form{
     padding:50px 80px;
-    background:#cbc1c1e9;
+    background:#2F4F3F;
     display:grid;
     grid-template-columns:2fr 1fr;
     gap:60px;
@@ -827,7 +829,7 @@
 
 .form .title h1{
     font-size:48px;
-    color:#222;
+    color:#fff;
     margin-bottom:15px;
     font-family:"Manrope",sans-serif;
 }
@@ -835,7 +837,7 @@
 .form .title p{
     max-width:700px;
     margin:auto;
-    color:#666;
+    color:#fff;
     line-height:1.8;
 }
 
@@ -1082,7 +1084,7 @@ form button:hover{
 
 .footer{
     overflow:hidden;
-    background: #cbc1c1e9;
+    background: #2F4F3F;
 }
 
 .footerWave{
@@ -1092,7 +1094,7 @@ form button:hover{
 }
 
 .footerContent{
-    background:#2E7D32;
+    background:#172828;
     display:flex;
     justify-content:space-between;
     gap:80px;
@@ -1173,12 +1175,24 @@ form button:hover{
 }
 
 .copyright{
-    background:#256628;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 80px;
-    color:white;
+    position: relative;
+    background: #172828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    color: white;
+}
+
+.copyright::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 1px;
+    background: #fff;
 }
 
 .copyrightLinks{
